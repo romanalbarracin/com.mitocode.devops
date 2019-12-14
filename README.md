@@ -2,7 +2,7 @@
 
 1. Ejecutar el archivo docker-compose de la carpeta src/devops:
 ```
-docker-compose -f dock er-compose-servers-devops up -d
+docker-compose -f docker-compose-servers-devops up -d
 ```
 2. Obteener clave de administrador jenkins:
 ```
@@ -26,6 +26,6 @@ git@github.com:romanalbarracin/java_devops_mitocode.git
 
 7. Asignar en la configuracion general jdk8 y el amven con mnombre mvn
 
-8. Programar el build cada minuto _H/1 * * * *_ 
+8. Programar el build cada minuto 
 
 

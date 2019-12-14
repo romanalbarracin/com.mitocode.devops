@@ -28,7 +28,7 @@ services:
       nofile:
         soft: 32000
         hard: 40000
-		
+
   jenkins:
     image: jenkinsci/blueocean:1.19.0
     user: root
@@ -47,4 +47,3 @@ volumes:
   sonarqube_data:
   sonarqube_extensions:
   jenkins-data:
-	
