@@ -5,7 +5,7 @@ pipeline {
 		docker { image 'maven:3.6-jdk-8-alpine' }
 	}
 	
-	enviromnet {
+	environment {
 		TUNNEL_SAUCECONNECT = 'devops'
 	}
 	
