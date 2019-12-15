@@ -12,7 +12,7 @@ pipeline {
 
 		stage ('Build Backend') {
 			steps {
-				sh 'mvn --bacth-mode package -Dmaven.test.skip=true'
+				sh 'mvn --batch-mode package -Dmaven.test.skip=true'
 			}
 		}
 	}
