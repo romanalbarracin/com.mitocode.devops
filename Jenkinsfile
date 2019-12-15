@@ -22,7 +22,7 @@ pipeline {
 			}
 		}
 		
-		stage ('Scan sonar') {
+		stage ('Scan Sonar') {
 			steps {
 				sh 'mvn --batch-mode sonar:sonar -Dsonar.host.url=${SONAR_HOST}'
 			}
