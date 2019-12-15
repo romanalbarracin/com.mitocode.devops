@@ -13,19 +13,17 @@ docker-compose -f dock er-compose-servers-devops exec jenkins cat /var/jenkins_h
 	- Crear usuario y clave 'admin'
 	- Dejar url por defecto
 	- Actualizar plugins
-	- instalar piglin 'docker'
+	- instalar pluglin 'docker'
 	- instalar el plugin 'pipeline-utility-steps'
 
-4. Crear Job en Jenkins con el nombre **java_devops_mitocode** de tipo **Multibranch Pipeline**
+4. Crear Job en Jenkins de tipo **Multibranch Pipeline**
 
 5. Connectar repositorio git del proyecto java de ejemplo con la ruta
 ```
 git@github.com:romanalbarracin/java_devops_mitocode.git
 ```
-6. Crear las credenciales con el repositorio SSH con la llave privada proporcionada (archivo enviado por correo)
+6. Configurar las credenciales con el repositorio SSH con la llave privada proporcionada (archivo enviado por correo)
 
-7. Asignar en la configuracion general jdk8 y el maven con mnombre mvn
-
-8. Programar el build cada minuto 
+7. Programar ejecucion del job de jenkins cada minuto
 
 

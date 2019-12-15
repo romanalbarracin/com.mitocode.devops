@@ -5,26 +5,32 @@ pipeline {
 	}
 	
 	environment {
-		TUNNEL_SAUCECONNECT = 'devops'
+		SONAR_HOST = 'http://localhost:9000/'
 	}
 	
 	stages {
 		
-		stage ('clean') {
+		stage ('Clean') {
 			steps {
 				sh 'mvn clean package -Dmaven.test.skip=true'
 			}
 		}
 		
-		stage ('test') {
+		stage ('Build') {
+			steps {
+				sh 'mvn --batch-mode package -Dmaven.test.skip=true'
+			}
+		}
+
+		stage ('Test') {
 			steps {
 				sh 'mvn test'
 			}
 		}
-
-		stage ('Build') {
+		
+		stage ('Scan sonar') {
 			steps {
-				sh 'mvn --batch-mode package -Dmaven.test.skip=true'
+				sh 'mvn --batch-mode sonar:sonar -Dsonar.host.url=${SONAR_HOST}'
 			}
 		}
 	}
