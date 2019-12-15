@@ -9,8 +9,20 @@ pipeline {
 	}
 	
 	stages {
+		
+		stage ('clean') {
+			steps {
+				sh 'mvn clean package -Dmaven.test.skip=true'
+			}
+		}
+		
+		stage ('test') {
+			steps {
+				sh 'mvn test'
+			}
+		}
 
-		stage ('Build Backend') {
+		stage ('Build') {
 			steps {
 				sh 'mvn --batch-mode package -Dmaven.test.skip=true'
 			}
