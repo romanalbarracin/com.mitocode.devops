@@ -14,6 +14,15 @@ services:
     restart: on-failure
     command: --default-authentication-plugin=mysql_native_password
 
+  tomcat:
+    image: tomcat:8.5-jre8
+    ports:
+     - "8888:8080"
+    depends_on:
+      - mysql_server
+    volumes:
+     - ./tomcat/webapps:/usr/local/tomcat/webapps
+
   sonarqube:
     image: sonarqube:7.9.1-community
     ports:

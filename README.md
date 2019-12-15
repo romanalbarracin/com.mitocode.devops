@@ -4,12 +4,12 @@
 ```
 docker-compose -f docker-compose-servers-devops up -d
 ```
-2. Obteener clave de administrador jenkins:
+2. Obtener clave de administrador jenkins e ingresarla:
 ```
 docker-compose -f dock er-compose-servers-devops exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 3. En jenkins:
-	- Instalar los plugins sugeridos
+	- Instalar los plugins sugeridos inicialmente
 	- Crear usuario y clave 'admin'
 	- Dejar url por defecto
 	- Actualizar plugins
@@ -25,5 +25,7 @@ git@github.com:romanalbarracin/java_devops_mitocode.git
 6. Configurar las credenciales con el repositorio SSH con la llave privada proporcionada (archivo enviado por correo)
 
 7. Programar ejecucion del job de jenkins cada minuto
+
+Eso esto todo, ya deberia funcionar correctamente.
 
 
