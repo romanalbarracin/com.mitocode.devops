@@ -24,7 +24,7 @@ git@github.com:romanalbarracin/java_devops_mitocode.git
 ```
 6. Crear las credenciales con el repositorio SSH con la llave privada proporcionada (archivo enviado por correo)
 
-7. Asignar en la configuracion general jdk8 y el amven con mnombre mvn
+7. Asignar en la configuracion general jdk8 y el maven con mnombre mvn
 
 8. Programar el build cada minuto 
 
