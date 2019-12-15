@@ -10,19 +10,13 @@ pipeline {
 	
 	stages {
 		
-		stage ('Clean') {
-			steps {
-				sh 'mvn clean package -Dmaven.test.skip=true'
-			}
-		}
-		
 		stage ('Build') {
 			steps {
 				sh 'mvn --batch-mode package -Dmaven.test.skip=true'
 			}
 		}
 
-		stage ('Test') {
+		stage ('Unit Test') {
 			steps {
 				sh 'mvn test'
 			}
@@ -32,6 +26,10 @@ pipeline {
 			steps {
 				sh 'mvn --batch-mode sonar:sonar -Dsonar.host.url=${SONAR_HOST}'
 			}
+		}
+		
+		stage ('Deploy') {
+
 		}
 	}
 }
