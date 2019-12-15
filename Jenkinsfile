@@ -1,7 +1,6 @@
 pipeline {
-	agent any
-	
-	tools {
+
+	agent {
 		docker { image 'maven:3.6-jdk-8-alpine' }
 	}
 	
