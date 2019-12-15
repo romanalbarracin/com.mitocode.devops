@@ -27,9 +27,5 @@ pipeline {
 				sh 'mvn --batch-mode sonar:sonar -Dsonar.host.url=${SONAR_HOST}'
 			}
 		}
-		
-		stage ('Deploy') {
-			//
-		}
 	}
 }
