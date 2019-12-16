@@ -33,11 +33,11 @@ git@github.com:romanalbarracin/com.mitocode.devops.git
 8. Para el deploy del war instalar el plugin **Deploy to container** y crear un job jenkins de tipo **Multibranch Pipeline** y alli crear la configuracion para desplegar en el servicio de tomcat
 
 	- Conectar al repositorio del proyecto
-	- Configurar el build con maven y con Golas clean install
-	- Configurar el pos deploy *Deploy war/ear to a container* con los valores
-		WAR/EAR files: /var/jenkins_home/workspace/com.mitocode.devops/target/devops.war
-		Context path: devops
-		Containers/ Tomact URL: http://localhost:8888
+	- Configurar el **build** con maven y con Goals _clean install_
+	- Configurar el **post-deploy** con _Deploy war/ear to a container_ con los valores
+	  - WAR/EAR files: /var/jenkins_home/workspace/com.mitocode.devops/target/devops.war
+	  - Context path: devops
+	  - Containers/ Tomact URL: http://localhost:8888
 
 
 Eso esto todo, ya deberia funcionar correctamente.
