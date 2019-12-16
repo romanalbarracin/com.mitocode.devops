@@ -1,10 +1,12 @@
 # Instrucciones para ejecutar el proyecto
 
+
+
 1. Ejecutar el archivo docker-compose de la carpeta src/devops:
 ```
 docker-compose -f docker-compose-servers-devops up -d
 ```
-_Nota: El servidor de tomcat a veces no inicia y debo hacerlo con el comando docker run -d -it --rm -p 8888:8080 tomcat:8.0-alpine_ 
+_Nota: El serivicio de tomcat a veces no inicia y debo hacerlo con el comando: docker run -d -it --rm -p 8888:8080 tomcat:8.0-alpine_ 
 
 2. Obtener clave de administrador jenkins e ingresarla:
 ```
