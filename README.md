@@ -20,7 +20,7 @@ docker-compose -f dock er-compose-servers-devops exec jenkins cat /var/jenkins_h
 	- instalar pluglin 'docker'
 	- instalar el plugin 'pipeline-utility-steps'
 
-4. Crear Job en Jenkins de tipo **Multibranch Pipeline**
+4. Crear Job en Jenkins con el nombre ***java_devops_mitocode** y de tipo **Multibranch Pipeline**
 
 5. Connectar repositorio git del proyecto java de ejemplo con la ruta
 ```
@@ -29,6 +29,16 @@ git@github.com:romanalbarracin/com.mitocode.devops.git
 6. Configurar las credenciales con el repositorio SSH con la llave privada proporcionada (archivo enviado por correo)
 
 7. Programar ejecucion del job de jenkins cada minuto
+
+8. Para el deploy del war instalar el plugin **Deploy to container** y crear un job jenkins de tipo **Multibranch Pipeline** y alli crear la configuracion para desplegar en el servicio de tomcat
+
+	- Conectar al repositorio del proyecto
+	- Configurar el build con maven y con Golas clean install
+	- Configurar el pos deploy *Deploy war/ear to a container* con los valores
+		WAR/EAR files: /var/jenkins_home/workspace/com.mitocode.devops/target/devops.war
+		Context path: devops
+		Containers/ Tomact URL: http://localhost:8888
+
 
 Eso esto todo, ya deberia funcionar correctamente.
 
