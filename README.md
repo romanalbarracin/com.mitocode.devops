@@ -4,6 +4,8 @@
 ```
 docker-compose -f docker-compose-servers-devops up -d
 ```
+_Nota: El servidor de tomcat a veces no inicia y debo hacerlo con el comando docker run -d -it --rm -p 8888:8080 tomcat:8.0-alpine_ 
+
 2. Obtener clave de administrador jenkins e ingresarla:
 ```
 docker-compose -f dock er-compose-servers-devops exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
@@ -25,11 +27,6 @@ git@github.com:romanalbarracin/java_devops_mitocode.git
 6. Configurar las credenciales con el repositorio SSH con la llave privada proporcionada (archivo enviado por correo)
 
 7. Programar ejecucion del job de jenkins cada minuto
-
-8. Iniciar el servicio de Tomcat para desplegar el war
-```
-docker run -d -it --rm -p 8888:8080 tomcat:8.0-alpine
-```
 
 Eso esto todo, ya deberia funcionar correctamente.
 

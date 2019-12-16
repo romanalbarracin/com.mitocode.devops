@@ -2,6 +2,14 @@ version: '2'
 
 services:
 
+  tomcat:
+    build: ./dockerfile-tomcat/
+    image: tomcat:8.0-alpine
+    ports:
+     - "8888:8080"
+    volumes:
+     - ./tomcat/webapps:/usr/local/tomcat/webapps
+
   mysql_server:
     build: ./dockerfile-mysql/
     image: mysql:5.7.25
@@ -13,14 +21,6 @@ services:
       - "3333:3306"
     restart: on-failure
     command: --default-authentication-plugin=mysql_native_password
-
-  tomcat:
-    build: ./dockerfile-tomcat/
-    image: openjdk:8-jdk
-    ports:
-     - "8888:8080"
-    volumes:
-     - ./tomcat/webapps:/usr/local/tomcat/webapps
 
   sonarqube:
     image: sonarqube:7.9.1-community
