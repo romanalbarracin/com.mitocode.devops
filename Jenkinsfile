@@ -21,5 +21,11 @@ pipeline {
 				sh 'mvn test'
 			}
 		}
+		
+		stage ('Deploy') {
+			steps {
+				sh 'cp /var/jenkins_home/workspace/java_devops_mitocode_master@2/target/devops.war /usr/local/tomcat/webapps/'
+			}
+		}
 	}
 }

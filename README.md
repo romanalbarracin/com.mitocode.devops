@@ -26,6 +26,11 @@ git@github.com:romanalbarracin/java_devops_mitocode.git
 
 7. Programar ejecucion del job de jenkins cada minuto
 
+8. Iniciar el servicio de Tomcat para desplegar el war
+```
+docker run -d -it --rm -p 8888:8080 tomcat:8.0-alpine
+```
+
 Eso esto todo, ya deberia funcionar correctamente.
 
 
