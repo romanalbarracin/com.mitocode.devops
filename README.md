@@ -24,7 +24,7 @@ docker-compose -f dock er-compose-servers-devops exec jenkins cat /var/jenkins_h
 
 5. Connectar repositorio git del proyecto java de ejemplo con la ruta
 ```
-git@github.com:romanalbarracin/java_devops_mitocode.git
+git@github.com:romanalbarracin/com.mitocode.devops.git
 ```
 6. Configurar las credenciales con el repositorio SSH con la llave privada proporcionada (archivo enviado por correo)
 

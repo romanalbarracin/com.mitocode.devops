@@ -24,7 +24,7 @@ pipeline {
 		
 		stage ('Deployment') {
 			steps {
-				sh 'copy /var/jenkins_home/workspace/java_devops_mitocode_master@2/target/devops.war /usr/local/tomcat/webapps/'
+				sh 'cp /var/jenkins_home/workspace/java_devops_mitocode_master@2/target/devops.war /usr/local/tomcat/webapps/'
 			}
 		}
 	}
