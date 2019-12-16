@@ -40,6 +40,6 @@ git@github.com:romanalbarracin/com.mitocode.devops.git
 	  - Containers/ Tomact URL: http://localhost:8888
 
 
-Eso esto todo, ya deberia funcionar correctamente.
+Con estos pasos deberia funcionar correctamente.
 
 
